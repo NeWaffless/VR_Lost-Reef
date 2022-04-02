@@ -3,7 +3,7 @@ Lost Reef is an interactive VR experience developed for the Oculus Quest 2, wher
 
 
 
-## Installation (currently needs git lfs)
+## Installation
 To run the application, an up-to-date version of Unity is required, as well as a Virtual Reality headset (tested on Oculus Quest 2).
 1. Download the repo locally.
 2. Run as a Unity project.
