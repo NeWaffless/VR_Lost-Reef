@@ -24,7 +24,7 @@ The application is optimized for wireless play on an Oculus Quest, however may r
 ### Initial Contributors
 Aidan Walbran - Development, Interaction
 
-Ryan Van Dyk - Modelling, Level Design, Visual Design, Visual Development
+Ryan Van Dyk - Modeling, Level Design, Visual Design, Visual Development
 
 Mustafa Aqil - Sound Design, Modelling, User Testing
 
@@ -33,4 +33,4 @@ James Newton - Sketching, Level Design, User Testing
 ### Further Contributors
 Aidan Walbran - Development, Experience Design
 
-Ryan Van Dyk - Modelling, Visual Development, Experience Design
+Ryan Van Dyk - Modeling, Visual Development, Experience Design
