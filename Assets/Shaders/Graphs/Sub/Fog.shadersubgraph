@@ -87,20 +87,6 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
-                    "m_Id": "266e4675bd7f406b93503907d2c3a717"
-                },
-                "m_SlotId": 0
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "df3ee1e0c64c4742bc2a484924126dc1"
-                },
-                "m_SlotId": 1
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
                     "m_Id": "5caec0176a5c420989292c9e3f07ce5e"
                 },
                 "m_SlotId": 0
@@ -163,9 +149,9 @@
             },
             "m_InputSlot": {
                 "m_Node": {
-                    "m_Id": "cf3eb883fae04b58910ca9e585b68cb6"
+                    "m_Id": "df3ee1e0c64c4742bc2a484924126dc1"
                 },
-                "m_SlotId": 1
+                "m_SlotId": 2
             }
         },
         {
@@ -177,23 +163,9 @@
             },
             "m_InputSlot": {
                 "m_Node": {
-                    "m_Id": "266e4675bd7f406b93503907d2c3a717"
-                },
-                "m_SlotId": 1
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
-                    "m_Id": "cf3eb883fae04b58910ca9e585b68cb6"
-                },
-                "m_SlotId": 2
-            },
-            "m_InputSlot": {
-                "m_Node": {
                     "m_Id": "df3ee1e0c64c4742bc2a484924126dc1"
                 },
-                "m_SlotId": 2
+                "m_SlotId": 1
             }
         },
         {
@@ -251,8 +223,8 @@
     "m_ShaderOutputName": "InMinMax",
     "m_StageCapability": 3,
     "m_Value": {
-        "x": -1.0,
-        "y": 1.0
+        "x": 0.0,
+        "y": 100.0
     },
     "m_DefaultValue": {
         "x": 0.0,
@@ -303,8 +275,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 1837.9998779296875,
-            "y": 637.0,
+            "x": 1867.0,
+            "y": 617.0000610351563,
             "width": 208.0,
             "height": 326.0
         }
@@ -544,8 +516,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 2142.0,
-            "y": 809.0,
+            "x": 2157.0,
+            "y": 810.0,
             "width": 111.0,
             "height": 77.0
         }
@@ -859,7 +831,7 @@
     "m_ShaderOutputName": "Min",
     "m_StageCapability": 3,
     "m_Value": {
-        "x": 0.0,
+        "x": -8000.0,
         "y": 0.0,
         "z": 0.0,
         "w": 0.0
@@ -1146,10 +1118,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 1557.0,
+            "x": 1558.0,
             "y": 637.0,
             "width": 208.0,
-            "height": 326.0
+            "height": 326.0000305175781
         }
     },
     "m_Slots": [
@@ -1187,10 +1159,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 1023.0000610351563,
-            "y": 634.0,
-            "width": 165.00001525878907,
-            "height": 34.0
+            "x": 1130.4000244140625,
+            "y": 765.6000366210938,
+            "width": 168.79994201660157,
+            "height": 34.399967193603519
         }
     },
     "m_Slots": [
@@ -1237,10 +1209,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 808.0,
-            "y": 583.0000610351563,
-            "width": 144.0,
-            "height": 34.0
+            "x": 1114.4000244140625,
+            "y": 710.4000244140625,
+            "width": 147.19996643066407,
+            "height": 34.4000244140625
         }
     },
     "m_Slots": [
@@ -1373,8 +1345,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 1344.0001220703125,
-            "y": 744.0,
+            "x": 1366.0,
+            "y": 750.0,
             "width": 128.0,
             "height": 101.0
         }

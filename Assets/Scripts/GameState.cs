@@ -58,7 +58,7 @@ public class GameState : MonoBehaviour
 
     void Update()
     {
-        if(!isRunning) return;
+        //if(!isRunning) return;
         CheckPollStage();
         if(pollStage != prevPollStage)
         {
@@ -105,13 +105,13 @@ public class GameState : MonoBehaviour
                 garbageSet1.gameObject.SetActive(true);
                 break;
             case Stages.PLASTICS:
-                fishSet2.gameObject.SetActive(false);
                 garbageSet2.gameObject.SetActive(true);
                 break;
             case Stages.END:
                 musicAudio.GetComponent<AudioManager>().ChangeTrack(2);
                 boatEvent.GetComponent<BoatEvent>().SpawnBoat();
                 StartCoroutine(ResetExperience());
+                fishSet2.gameObject.SetActive(false);
                 break;
             default:
                 break;

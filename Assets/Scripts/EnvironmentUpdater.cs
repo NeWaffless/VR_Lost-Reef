@@ -46,6 +46,7 @@ public class EnvironmentUpdater : MonoBehaviour
     Material coralMat;
     [Rename("Initial coral saturation")]
     [SerializeField] float initSat;
+    [SerializeField] int desaturationStart;
 
     [Header("Camera backdrop")]
     [SerializeField] Material backdrop;
@@ -100,9 +101,7 @@ public class EnvironmentUpdater : MonoBehaviour
             );
             return;
         }
-
-        coralMat.SetFloat("_Saturation", (pMax - pLevel) / pMax);
-
+            coralMat.SetFloat("_Saturation", (1.8f * pMax - 2f * pLevel) / (1.8f*pMax));
         if (fogInd + 1 < keyFogValues.Length && pLevel > keyFogValues[fogInd + 1].pollutionVal)
         {
             fogInd++;
