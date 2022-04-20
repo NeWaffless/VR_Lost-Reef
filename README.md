@@ -1,4 +1,4 @@
-# Lost Reef - VR | [More information](https://newaffless.github.io/pages/lost-reef.html)
+# Lost Reef - VR | [Portfolio link](https://newaffless.github.io/pages/lost-reef.html)
 ![lr-card](https://user-images.githubusercontent.com/75866732/164215062-63063746-b1c9-434f-adb2-a2bd52bebcfb.png)
 Lost Reef is an interactive VR experience developed for the Oculus Quest 2, where the user swims through a reef as it slowly degrades around them. The purpose of the experience is to show the impact of man-made pollution on reef systems, and the medium of Virtual Reality allows the experience to feel very personal. The experience was initially for a university assessment, and later refined to make the experience feel more alive and iron out the issues.
 
