@@ -5,42 +5,61 @@ public class GameState : MonoBehaviour
 {
     // spawn locations
     [Header("Spawn locations")]
-    [SerializeField] Transform menuSpawn;
-    [SerializeField] Transform experienceSpawn;
-    
+    [SerializeField]
+    Transform menuSpawn;
+
+    [SerializeField]
+    Transform experienceSpawn;
+
     // experience state
     public bool isRunning { get; private set; }
-    public enum Stages 
+
+    public enum Stages
     {
         CLEAN = 35,
         OVERFISHING = 60,
         PLASTICS = 99,
         END = 100
     }
-    Stages pollStage, prevPollStage;
+
+    Stages pollStage,
+        prevPollStage;
 
     // reset
     [Header("")]
     [Rename("Wait time before reset")]
-    [SerializeField] float timeUntilReset;
+    [SerializeField]
+    float timeUntilReset;
 
     // necessary components
     [Header("Component references")]
-    [SerializeField] GameObject player;
+    [SerializeField]
+    GameObject player;
     PollutionMeter polMeter;
     EnvironmentUpdater envUpdater;
-    [SerializeField] GameObject musicAudio;
-    [SerializeField] GameObject boatEvent;
-    [SerializeField] GameObject menuPointer;
-    
+
+    [SerializeField]
+    GameObject musicAudio;
+
+    [SerializeField]
+    GameObject boatEvent;
+
+    [SerializeField]
+    GameObject menuPointer;
+
     // fish
-    [SerializeField] Transform fishSet1;
-    [SerializeField] Transform fishSet2;
+    [SerializeField]
+    Transform fishSet1;
+
+    [SerializeField]
+    Transform fishSet2;
+
     // garbage
-    [SerializeField] Transform garbageSet1;
-    [SerializeField] Transform garbageSet2;
+    [SerializeField]
+    Transform garbageSet1;
 
-
+    [SerializeField]
+    Transform garbageSet2;
 
     void InitialiseVariables()
     {
@@ -58,27 +77,28 @@ public class GameState : MonoBehaviour
 
     void Update()
     {
-        //if(!isRunning) return;
+        if (!isRunning)
+            return;
         CheckPollStage();
-        if(pollStage != prevPollStage)
+        if (pollStage != prevPollStage)
         {
             UpdateStage();
             prevPollStage = pollStage;
         }
     }
-    
+
     void CheckPollStage()
     {
         float pLevel = polMeter.GetPolLevel();
-        if(pLevel < (float) Stages.CLEAN)
+        if (pLevel < (float)Stages.CLEAN)
         {
             pollStage = Stages.CLEAN;
         }
-        else if(pLevel < (float) Stages.OVERFISHING)
+        else if (pLevel < (float)Stages.OVERFISHING)
         {
             pollStage = Stages.OVERFISHING;
         }
-        else if(pLevel < (float) Stages.END)
+        else if (pLevel < (float)Stages.END)
         {
             pollStage = Stages.PLASTICS;
         }
@@ -90,7 +110,7 @@ public class GameState : MonoBehaviour
 
     void UpdateStage()
     {
-        switch(pollStage)
+        switch (pollStage)
         {
             case Stages.CLEAN:
                 musicAudio.GetComponent<AudioManager>().ChangeTrack(0);
@@ -142,8 +162,12 @@ public class GameState : MonoBehaviour
         musicAudio.GetComponent<AudioManager>().ChangeTrack(0);
         boatEvent.GetComponent<BoatEvent>().ResetBoat();
 
-        player.GetComponent<PlayerInput>().GetRightController().GetComponentInChildren<Animator>().enabled = false;
-        
+        player
+            .GetComponent<PlayerInput>()
+            .GetRightController()
+            .GetComponentInChildren<Animator>()
+            .enabled = false;
+
         polMeter.gameObject.SetActive(false);
         envUpdater.gameObject.SetActive(false);
         fishSet1.gameObject.SetActive(true);
@@ -159,5 +183,4 @@ public class GameState : MonoBehaviour
     {
         return timeUntilReset;
     }
-
 }
